@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Profile</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/notifications.css">
+</head>
+<body>
+  <div class="container">
+    <h1>John's Profile</h1>
+    <div class="subscription-status">
+      <span>Free Tier (3/5 interpretations left)</span>
+      <button onclick="window.location.href='payment.html'">Upgrade</button>
+    </div>
+    
+    <div class="dream-history">
+      <h2>Past Dreams</h2>
+      <ul>
+        <li>Dream about snakes (March 5) <button onclick="viewDetails()">View</button></li>
+        <li>Flying over mountains (March 3) <button onclick="viewDetails()">View</button></li>
+      </ul>
+    </div>
+
+    <div class="settings">
+      <h2>Settings</h2>
+      <label><input type="checkbox" id="notifications"> Enable Notifications</label>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/notifications.js"></script>
+</body>
+</html>
