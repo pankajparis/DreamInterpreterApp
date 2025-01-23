@@ -1,28 +1,34 @@
-// Simulate user login
-function login(provider) {
-  localStorage.setItem('user', 'demo@example.com');
-  window.location.href = 'describe-dream.html';
+// Mock subscription
+function subscribe() {
+  localStorage.setItem('premium', 'true');
+  alert('Subscription successful!');
+  window.location.href = 'profile.html';
 }
 
-// Mock AI interpretation
+// Logout
+function logout() {
+  localStorage.removeItem('user');
+  window.location.href = 'index.html';
+}
+
+// Mock dream details
+function viewDetails() {
+  alert("Full dream details (premium-only)");
+}
+
+// Track remaining free interpretations
+if (localStorage.getItem('interpretationCount') === null) {
+  localStorage.setItem('interpretationCount', 0);
+}
+
 function interpretDream() {
-  const dream = document.getElementById('dreamText').value;
-  const emotion = document.getElementById('emotion').value;
-  
-  // Simulate AI output
-  const keywords = ["Snake", "Water", "Running"];
-  const insights = `The ${keywords[0]} symbolizes hidden fears. ${emotion} suggests...`;
-  
-  // Redirect to results
+  let count = parseInt(localStorage.getItem('interpretationCount'));
+  if (count >= 5 && !localStorage.getItem('premium')) {
+    alert('Upgrade to premium for more interpretations!');
+    window.location.href = 'payment.html';
+    return;
+  }
+  count++;
+  localStorage.setItem('interpretationCount', count);
   window.location.href = 'interpretation.html';
-}
-
-// Upgrade to premium
-function upgradePremium() {
-  alert('Redirecting to payment...');
-}
-
-// Share to social media
-function shareDream() {
-  alert('Sharing your dream...');
 }
