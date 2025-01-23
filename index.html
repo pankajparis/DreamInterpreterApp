@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamScope | Login</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="logo">
+      <img src="images/logo.svg" alt="DreamScope Logo">
+    </div>
+    <div class="auth-card">
+      <h1>Unlock Your Dreams</h1>
+      <button class="auth-btn google" onclick="login('google')">
+        <img src="images/google-icon.svg" alt="Google"> Continue with Google
+      </button>
+      <button class="auth-btn apple" onclick="login('apple')">
+        <img src="images/apple-icon.svg" alt="Apple"> Continue with Apple
+      </button>
+      <div class="separator">or</div>
+      <form class="email-form">
+        <input type="email" placeholder="Email" class="modern-input">
+        <input type="password" placeholder="Password" class="modern-input">
+        <button class="primary-btn">Sign Up / Login</button>
+      </form>
+      <p class="disclaimer">By continuing, you agree to our <a href="#">Terms</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
