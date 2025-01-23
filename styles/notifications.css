@@ -1,0 +1,26 @@
+/* Notifications */
+.notification-badge {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Subscription Status */
+.subscription-status {
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.dream-history li {
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
